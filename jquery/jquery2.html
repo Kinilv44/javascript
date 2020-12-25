@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label>Họ:</label> &emsp;
+        <select id="button" onchange="fName()">
+            <option value="Nguyễn">Nguyễn</option>
+            <option value="Hoàng">Hoàng</option>
+            <option value="Lê">Lê</option>
+            <option value="khác">khác</option>
+        </select>
+    </div><br>
+    <div>
+        <label>Tên:</label> &ensp; <input type="text" id="hide">
+    </div><br>
+    <div style="margin-left: 48px;">
+        <button onclick="myfunction()">Gen</button>
+        <div><input type="text" id="numbe" disabled></div>
+    </div><br><br>
+    <div> <label>Font-size:</label>
+        <input type="text" id="numbe1">
+    </div><br>
+    <div> <label>Color:</label> &emsp;
+        <input type="color" id="numbe2">
+    </div><br>
+    <div><label>Type:</label> &emsp;
+        <select id="numbe3">
+            <option value="Bold">Bold</option>
+            <option value="Italic">Italic</option>
+        </select>
+    </div> <br>
+    <div style="margin-left: 48px;">
+        <button onclick="myfunction2()">Gen</button>
+        <p id="demo2"></p> <br> <br>
+        <button onclick="myfunction3()">Check</button>
+    </div>
+
+    <script>
+        function myfunction() {
+            var a = document.getElementById("button").value;
+            var b = document.getElementById("hide").value;
+            if (a == "khác") {
+                document.getElementById("numbe").value = b;
+            } else {
+                document.getElementById("numbe").value = a + " " + b;
+            }
+        }
+        function myfunction2() {
+            var x = document.getElementById("numbe").value;
+            document.getElementById("demo2").innerHTML = x;
+            var y = document.getElementById("numbe1").value;
+            document.getElementById("demo2").style.fontSize = y;
+            var z = document.getElementById("numbe2").value;
+            document.getElementById("demo2").style.color = z;
+            var n = document.getElementById("numbe3").value;
+            if (n == "Bold") {
+                document.getElementById("demo2").style.fontStyle = "";
+                document.getElementById("demo2").style.fontWeight = "Bold";
+            }
+            else {
+                document.getElementById("demo2").style.fontWeight = "";
+                document.getElementById("demo2").style.fontStyle = "italic";
+            }
+        }
+        function myfunction3() {
+            var ab = document.getElementById("hide").value;
+            var ac = document.getElementById("numbe1").value;
+            var ad = document.getElementById("numbe2").value;
+            if (ab == "" || ac == "" || ad == "") {
+                alert("hãy điền thông tin");
+            }
+            else {
+                alert("Bạn đã điền đủ thông tin");
+            }
+        }
+    </script>
+</body>
+
+</html>

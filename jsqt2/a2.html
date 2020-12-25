@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="id"></p>
+    <input type="text" id="bonus">
+    <button onclick="class1()" type="button">click</button>
+    <script>
+        function class1() {
+            var a = Number(document.getElementById("bonus").value);
+            var kq;
+            if (a == "" || a < 0 || a > 10) {
+                kq = "fall";
+            }
+            else {
+                kq = "true";
+            }
+            document.getElementById("id").innerHTML = kq;
+        }
+
+    </script>
+</body>
+
+</html>

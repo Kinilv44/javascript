@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo00"></p>
+    <p id="demo1"></p>
+    <button onclick="togor()">Try it</button>
+    <p id="demo2"></p>
+
+
+    <script>
+        var last = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = last;
+        last.pop();
+        document.getElementById("demo00").innerHTML = last;
+
+    </script>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits.join(" * ");
+
+    </script>
+    <script>
+        var mvp = ["con meo", "con cho", "con tho", "con khi"];
+        document.getElementById("demo2").innerHTML = mvp;
+        function togor() {
+            mvp.sort();
+            document.getElementById("demo2").innerHTML = mvp;
+        }
+    </script>
+</body>
+
+</html>

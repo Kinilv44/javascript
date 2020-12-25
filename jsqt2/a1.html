@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- js introduction -->
+    <div id="conten">javascript can change HTML content</div>
+    <button type="button" onclick='document.getElementById("conten").innerHTML = "hello javascript"'>Click me</button>
+    <br>
+    <button onclick="document.getElementById('img1').src='download.jfif'">Turn on</button>
+    <img src="download.jfif" alt="#" id="img1" width="100px">
+    <button onclick="document.getElementById('img1').src='download.jfif'">turn Of</button>
+    <br>
+    <p id="demo">cant i help you => tooi khong the giup gi cho ban</p>
+    <p id="demo2" style="display: none;">elements là các yếu tố</p>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Cho font chữ to hơn</button>
+    <br>
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">Bấm vào cho chữ ẩn</button>
+    <br>
+    <button type="button" onclick="document.getElementById('demo2').style.display='block'">bấm vào đây cho chữ hiện
+        ra</button>
+    <!-- end js introduction -->
+    <!-- Output -->
+    <p id="demo3"></p>
+    <button type="button" onclick="document.write(5 + 6)">Try It là thử nó</button><br>
+    <!--end Output -->
+    <!-- start Statements -->
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <!-- events -->
+    <p id="demo7"></p>
+    <button onclick="document.getElementById('demo7').innerHTML = Date();">click</button>
+    <hr>
+    <!-- date -->
+    <!-- function -->
+    <p id="demo8"></p>
+
+    <!-- Output -->
+    <script>document.getElementById('demo3').innerHTML = 5 + 6;
+        document.write(5 + 6);
+    </script>
+    <!-- // Statement 1 -->
+    <script>
+        var x, y, z;
+        x = 5;
+        y = 6;
+        z = x + y;
+        document.getElementById("demo4").innerHTML = "the value of z is" + z + ".";
+        document.getElementById('demo5').innerHTML = "Hello Try it";
+        var a, b, c;
+        a = 5;
+        b = 6;
+        c = a + b;
+        document.getElementById('demo6').innerHTML = c;
+    </script>
+    <!-- and Statement 1 -->
+
+    <script>
+        var txt = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        var sln = txt.length;
+        document.getElementById("demo8").innerHTML = sln;
+    </script>
+
+</body>
+
+</html>

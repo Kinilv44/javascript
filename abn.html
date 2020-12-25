@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="abn.css">
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert("text:" + $("#test").text());
+            });
+
+            $("#btn2").click(function () {
+                alert("HTML:" + $("#test").html());
+            });
+            $(".btn2").click(function () {
+                alert("value:" + $("#test").val());
+            });
+            $(".btn12").click(function () {
+                alert($("#w3s").attr("href"));
+            });
+            $("#bn1").click(function () {
+                $("#test1").text("hello world!");
+            });
+            $("#bn2").click(function () {
+                $("#test2").html("<b>Hello world!</b>")
+            })
+            $("#bn3").click(function () {
+                $("#test3").val("Dolly Duck");
+
+            });
+            $("#btnn1").click(function () {
+                $("#pp1").append("<b>Appended text</b>.")
+            });
+            $("#btnn2").click(function () {
+                $("#pp2").append("<li>Appended item</li>");
+            })
+            $(".last").click(function () {
+                $("#div1").remove();
+            })
+            $("#last124").click(function () {
+                $("#div1").empty();
+            });
+            $("#remove").click(function () {
+                $(".test").remove();
+            });
+            $(".class1").click(function () {
+                $(".content").addClass("red");
+                $(".content2").addClass("important");
+            });
+            $(".class2").click(function () {
+                $(".content2").addClass("important blue")
+            });
+            $(".click3").click(function () {
+                $(".classsix").css("background-color", "yellow");
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- get -->
+    <p id="test">this is some <b>bold</b> text in a paragraph.</p>
+    <button id="btn1">show text</button><button id="btn2">show html</button>
+    <br> <br> <br> <br> <br>
+    <p>Name: <input type="text" id="test" value="Rikkeysoft"></p>
+    <button class="btn2">Show Value</button>
+    <br> <br> <br>
+    <p><a href="https://www.w3schools.com" id="w3s">W3school.com</a></p>
+    <button class="btn12">show href value</button>
+    <br> <br> <br> <br> <br>
+    <!-- get -->
+    <!-- set -->
+    <p id="test1">This is a paragaraph</p>
+    <p id="test2">This is a paragaraph</p>
+    <p>
+        Input field
+        <input type="text" id="test3" value="Mickey Mouse">
+    </p>
+    <button id="bn1">Set Text</button>
+    <button id="bn2">Set HTML</button>
+    <button id="bn3">Set Value</button>
+    <br> <br> <br> <br> <br>
+    <!-- set -->
+    <!-- appen -->
+    <div>
+        <p id="pp1">this is a paragraph.</p>
+        <ol id="pp2">
+            <li>List item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ol>
+        <button id="btnn1"> in đậm ở Ol</button>
+        <button id="btnn2"> in đậm đằng trước</button>
+    </div>
+    <!-- appen -->
+    <!-- remove -->
+    <button class="last">remove</button>
+    <!-- empty -->
+    <button id="last124">empty</button>
+    <div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+        This is some text in the div.>
+    </div>
+    <!-- empty -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="test">This is p element with class="test".</p>
+                <p class="test">This is p element with class="test".</p>
+                <p class="test">This is p element with class="demo".</p>
+                <button id="remove">click</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="content">
+                    1 tạo lập thói quen cho làm việc năng xuất
+                    2 thiết lập mục tiêu nhằm nâng cao cơ hội thành công
+                </h1>
+                <p class="content2">
+                    3 thích ứng với các khó khăn để công việc nâng cao hiệu quả công việc hằng ngày
+                    4 đảm bảo công việc đảm bảo chất lượng công việc
+                    5 liên tục cải tiến công việc để luôn luôn tìm ra cách làm việc tốt nhất
+                </p>
+                <button class="class1">click1</button>
+                <button class="class2">click2</button>
+                <button class="class3">click3</button>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <!-- backgroup css -->
+            <p class="classsix" style="background-color: aqua;">this is a paragraph</p>
+            <p class="classsix" style="background-color: aqua;">this ia a paragraph</p>
+            <p class="classsix" style="background-color: aqua;">this is a paragraph</p>
+            <button class="click3">click</button>
+            <!-- backgroup css -->
+        </div>
+    </div>
+
+</body>
+
+</html>
+​

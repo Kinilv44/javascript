@@ -1,0 +1,9 @@
+.class1,.class2,.class3{color: white; width: 100px; height: 100px; background-color: violet; margin-bottom: 5px; display: none;}
+.class4,.class5,.class6{color: white; width: 100px; height: 100px; background-color: violet; margin-bottom: 5px;}
+.class7,.class8,.class9{color: white; width: 100px; height: 100px; background-color: violet; margin-bottom: 5px;}
+
+.slider2{text-align: center;background-color: rgb(214, 16, 164);color: rgb(248, 248, 248);padding: 5px;display: none;}
+.slider1{text-align: center;background-color: rgb(16, 214, 42);color: rgb(247, 247, 247);padding: 5px;}
+.slider3,.slider4{text-align: center;background-color: rgb(59, 59, 45);color: rgb(243, 243, 243);padding: 5px;}
+.slider6{text-align: center;background-color: rgb(255, 136, 0);color: rgb(245, 239, 239);padding: 5px;}
+.slider5{text-align: center;background-color: rgb(199, 164, 8);color: rgb(245, 243, 243);padding: 5px;}

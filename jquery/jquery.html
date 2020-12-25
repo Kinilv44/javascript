@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="banner">
+        <div class="flex">
+            <div class="lkhung"><label>Họ:</label></div>
+            <div>
+                <select id="fname" onchange="fName()">
+                    <option value="Nguyễn">Nguyễn</option>
+                    <option value="Hoàng">Hoàng</option>
+                    <option value="Lê">Lê</option>
+                    <option value="khác">khác</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="lkhung"> <label>Tên:</label></div>
+            <div><input type="text" id="lname"></div>
+        </div>
+        <div>
+            <button onclick="gen1()" id="gen1" class="gen">Gen</button>
+        </div>
+        <!-- gfhhhhhhhhh -->
+        <div class="flex">
+            <div class="lkhung"> <label></label></div>
+            <div><input type="text" id="in" disabled></div>
+        </div>
+        <div class="flex">
+            <div class="lkhung"> <label>Font-size:</label></div>
+            <div><input type="text" id="font1"></div>
+        </div>
+        <div class="flex">
+            <div class="lkhung"> <label>Color:</label></div>
+            <div><input type="text" id="color1"></div>
+        </div>
+        <div class="flex">
+            <div class="lkhung"> <label>Type:</label></div>
+            <select id="ftype" onchange="fType()">
+                <option value="Bold">Bold</option>
+                <option value="Italic">Italic</option>
+            </select>
+        </div>
+        <div>
+            <button onclick="gen2()" id="gen1" class="gen">Gen</button>
+        </div>
+        <div>
+            <p id="name" class="gen"></p>
+        </div>
+        <div>
+            <button onclick="check1()" id="check" class="gen">Check</button>
+        </div>
+    </div>
+
+    <script>
+        function gen1() {
+            var str1 = document.getElementById("fname").value;
+            var str2 = document.getElementById("lname").value;
+            if (str1 == "khác") {
+                document.getElementById("in").value = str2;
+            } else {
+                document.getElementById("in").value = str1 + " " + str2;
+            }
+        }
+
+        function gen2() {
+            var str = document.getElementById("in").value;
+            var size1 = Number(document.getElementById("font1").value) + "px";
+            var color1 = "#" + document.getElementById("color1").value;
+            var type1 = document.getElementById("ftype").value;
+
+            document.getElementById("name").innerHTML = str;
+            document.getElementById("name").style.fontSize = size1;
+            document.getElementById("name").style.color = color1;
+
+            if (type1 == "Bold") {
+                document.getElementById("name").style.fontStyle = "";
+                document.getElementById("name").style.fontWeight = "Bold";
+            } else {
+                document.getElementById("name").style.fontWeight = "";
+                document.getElementById("name").style.fontStyle = "italic";
+            }
+        }
+
+        function check1() {
+            var name = document.getElementById("lname").value;
+            var size = document.getElementById("font1").value;
+            var mau = document.getElementById("color1").value;
+
+            if (name == "" || size == "" || mau == "") {
+                alert("Bạn chưa điền đủ Tên, Font-size, Color");
+            } else {
+                alert("Bạn đã điền đủ thông tin");
+            }
+        }
+    </script>
+</body>
+
+</html>

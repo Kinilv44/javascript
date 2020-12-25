@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="hh"></p>
+    <p id="nn"></p>
+    <p id="p1">5</p>
+    <p id="p2">8</p>
+    <button type="button" onclick="menter()">phep cong</button>
+    <p id="p3"></p>
+    <p id="a1">9</p>
+    <p id="a2">5</p>
+    <button type="button" onclick="mama()">phep tru</button>
+    <p id="a3"></p>
+
+
+    <input type="text" name="" id="id1" value="10"> &emsp; &emsp; &emsp; &emsp;
+    <input type="text" name="" id="id2" value="5"> <br> <br> <br> &emsp;
+    <button type="button" onclick="nana()">phep cong</button>
+    <p id="text3"></p>
+    <!--<img src="https://cuoifly.tuoitre.vn/820/0/ttc/r/2020/03/24/quang-hai-hai-quay-xe-1-copy-1585022474.jpg" alt=""
+        onclick="hihi()" id="hy">-->
+    <p id="ka">123456</p>
+    <p id="demo">113</p>
+    <select name="" id="bbb" onchange="ococ()">
+        <option value="conga">vv</option>
+        <option value="convit">con moe</option>
+        <option value="concho">vv</option>
+        <option value="conmeo">vv</option>
+    </select>
+    <p id="aaa"></p>
+    <script>
+        /* var x = 10;
+         var y = 5;
+         document.getElementById("hh").innerHTML = ++x;
+         document.getElementById("nn").innerHTML = x += y;*/
+        function menter() {
+            var x =
+                Number(document.getElementById("p1").innerHTML);
+            var y =
+                Number(document.getElementById("p2").innerHTML);
+
+            var z = x + y;
+            document.getElementById("p3").innerHTML = x + y;
+        }
+        function mama() {
+            var a =
+                Number(document.getElementById("a1").innerHTML);
+            var b =
+                Number(document.getElementById("a2").innerHTML);
+            var c = a - b;
+            document.getElementById("a3").innerHTML = a - b;
+        }
+        function nana() {
+            var h = Number(document.getElementById("id1").value);
+            var k =
+                Number(document.getElementById("id2").value);
+            var m = h + k;
+            document.getElementById("text3").innerHTML = m;
+        }
+        function hihi() {
+            alert("mot");
+        }
+
+        function kaka(p1, p2) {
+            return p1 * p2;
+        }
+        document.getElementById("ka").innerHTML = kaka(7, 7);
+
+        var person = {
+            a1: "haha",
+            a2: "hehe",
+            a3: 55,
+            a4: "red"
+        };
+        document.getElementById("demo").innerHTML = person.a1;
+
+
+        function ococ() {
+            var q = document.getElementById("bbb").value;
+            document.getElementById("aaa").innerHTML = q;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn12").click(function () {
+                $("#div113").load("new1.txt");
+            });
+
+        });
+        $.noConflict();
+        jQuery(document).ready(function () {
+            jQuery(".btn1").click(function () {
+                jQuery(".p1").text("jQuery is still working!");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div113">Let jquery ajax change this text</div>
+    <button class="btn12">exciter</button>
+    <!-- lst -->
+    <p class="p1" style="color: blue;">this is a paragraph</p>
+    <button class="btn1">test jquery</button>
+</body>
+
+</html>

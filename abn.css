@@ -1,0 +1,12 @@
+.important {
+    font-weight: bold;
+    font-size: xx-large;
+  }
+  .red{
+      color: royalblue;
+      font-size: 15px;
+      letter-spacing: 5px;
+  }
+  .blue {
+    color: red;
+  }

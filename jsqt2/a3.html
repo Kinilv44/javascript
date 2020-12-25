@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo1"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <button onclick="myFunction()">Click</button>
+    <p id="demo6"></p>
+
+    <input type="text" id="age" value="18">
+    <button onclick="myFunction()">click</button>
+    <p id="domen"></p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo22"></p>
+
+    <input type="text" id="message" value="" onkeyup="show_result()" />
+    <div id="result"></div>
+
+
+
+
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+        document.getElementById("demo2").innerHTML = Math.PI;
+        document.getElementById("demo1").innerHTML = Math.pow(8, 2);
+        document.getElementById("demo3").innerHTML = Math.random(); //random full
+        document.getElementById("demo4").innerHTML = Math.floor(Math.random() * 11);//random 10
+        document.getElementById("demo5").innerHTML = Math.floor(Math.random() * 100);
+    </script>
+    <script>
+        function myFunction() {
+            document.getElementById("demo6").innerHTML = 10 > 11;
+        }  
+    </script>
+    <script>
+        function myFunction() {
+            var age, ager;
+            age = document.getElementById("age").value;
+            ager = (age < 18) ? "chưa đủ tuổi" : "đủ tuổi";
+            document.getElementById("domen").innerHTML = ager + "" + " vote.";
+        }
+        function myFunction() {
+            var hour = new Date().getHours();
+            var greeting;
+            if (hour < 17) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            document.getElementById("demo22").innerHTML = greeting;
+        }
+
+    </script>
+    <script language="javascript">
+        // Hàm show kết quả
+        function show_result() {
+            // Lấy hai thẻ HTML
+            var input = document.getElementById("message");
+            var div = document.getElementById("result");
+            // Gán nội dung ô input vào thẻ div
+            div.innerHTML = input.value;
+        }
+    </script>
+</body>
+
+</html>
