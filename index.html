@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function () {
+            /*hide show*/
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+            $(".show").click(function () {
+                $("p").show();
+            });
+            //hide show
+            //    <!-- FadeIn FadeUp FadeToogle -->
+
+            $("#fadein1").click(function () {
+                $(".class1").fadeIn();
+                $(".class2").fadeIn("slow");
+                $(".class3").fadeIn(3000);
+            });
+
+            $("#fadeup").click(function () {
+                $(".class4").fadeOut();
+                $(".class5").fadeOut("slow");
+                $(".class6").fadeOut(3000);
+            });
+
+            $("#fadetoogle").click(function () {
+                $(".class7").fadeToggle();
+                $(".class8").fadeToggle("slow");
+                $(".class9").fadeToggle(3000);
+            });
+            //    <!-- FadeIn FadeUp FadeToogle -->
+            $(".slider1").click(function () {
+                $(".slider2").slideDown("slow");
+            });
+            $(".slider3").click(function () {
+                $(".slider4").slideUp("slow");
+            });
+            $(".slider5").click(function () {
+                $(".slider6").slideToggle("slow");
+            })
+            //animate
+            $(".animate1").click(function () {
+                $(".anima").animate({ left: '250px' });
+            });
+            //callBack'
+            $(".one").click(function () {
+                $(".ture").hide("slow", function () {
+                    alert("đây là lệnh callback")
+                });
+            });
+            $(".one2").click(function () {
+                $(".ture").hide(1000);
+                alert("the paragraph is now hidden");
+            });
+            $(".one3").click(function () {
+                $(".ture").css("color", "red").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    ​<div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- ​hide show -->
+                <p><img src="1045.jpg" alt="ảnh thiên nhiên" width="200" height="200px"></p>
+                <button id="hide">Hide</button>
+                <button class="show">Show</button>
+                <!-- ​hide show -->
+            </div>
+            <!-- FadeIn FadeUp FadeToogle -->
+            <div class="col-lg-3">
+                <!-- fadein -->
+                <button id="fadein1">Đẩy ra</button>
+                <div class="class1">đây là fadein</div>
+                <div class="class2">đây là fadein </div>
+                <div class="class3">đây là fadein</div>
+
+            </div>
+            <div class="col-lg-3">
+                <!-- fadeuout --><button id="fadeup">Kéo vào</button>
+                <div class="class4">đây là fadeOut</div>
+                <div class="class5">đây là fadeOut </div>
+                <div class="class6">đây là fadeOut</div>
+            </div>
+            <div class="col-lg-3">
+                <!-- fade toogle -->
+                <button id="fadetoogle">Đẩy ra kéo vào</button>
+                <div class="class7">đây là fadetoogle</div>
+                <div class="class8">đây là fadetoogle </div>
+                <div class="class9">đây là fadetoogle</div>
+            </div>
+        </div>
+    </div> <!-- FadeIn FadeUp FadeToogle -->
+    <div class="container">
+        <div class="row">
+            <!-- slider -->
+            <div class="col-lg-3">
+                <div class="slider1">Click to slide down panel</div>
+                <div class="slider2">Hello word</div>
+            </div>
+            <div class="col-lg-3">
+                <div class="slider3">Click to slide down panel</div>
+                <div class="slider4">Hello word</div>
+            </div>
+            <div class="col-lg-3">
+                <div class="slider5">Click to slide down panel</div>
+                <div class="slider6">Hello word</div>
+            </div>
+            <!-- animate -->
+            <div class="col-lg-3">
+                <button class="animate1">start animete</button>
+                <div style="width: 200px; height: 200px;background-color: aqua;position:absolute" class="anima">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="one">Hide</button>
+    <button class="one2">Hide2</button>
+    <button class="one3">One3</button>
+    <p class="ture">This is a paragraph with little content.</p>
+</body>
+
+</html>
+​
